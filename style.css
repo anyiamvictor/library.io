@@ -135,8 +135,22 @@ color:rgb(219, 249, 241);
     margin:5rem;
     box-shadow: 1px 2px 15px rgb(3, 3, 3),1px 2px 15px rgba(104, 88, 246, 0.301);
     transition:all .2s;
+    animation: formDown 1s ease-in-out;
 
 }
+
+@keyframes formDown {
+    0%{
+        transform:translatey(-19px);
+        opacity:0;
+    }
+
+    100%{
+        transform:translatey(0px);
+        opacity:1;
+    }
+}
+
 #plus{
     color:rgba(1, 25, 243, 0.432);
     font-size:20rem;
@@ -174,6 +188,8 @@ color:rgb(219, 249, 241);
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.215);
   backdrop-filter: blur(3px);
+    animation: formDown .8s ease-in-out;
+
 }
 
 .modal-content {
