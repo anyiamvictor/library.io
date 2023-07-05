@@ -143,28 +143,4 @@ stars.forEach((star, index) => {
 
 
 // API call for the ramdom quote of the day
-
-async function randomQuote() {
-    try {
-        // const response = await fetch("GET",'http://quotes.rest/qod.json?api_key=<I31clCqTsiNb314dIJOJFObBkqQu5lp8xVLRqQ7G></I31clCqTsiNb314dIJOJFObBkqQu5lp8xVLRqQ7G>');
-
-        const response2 = await fetch(" curl - v - i - X GET http://quotes.rest/qod.json?category=inspire");
-       
-        // const data = await response.json();
-        const data2 =  response2;
-
-
-        // console.log(data);
-        console.log(data2);
-
-
-
-    }
-
-    catch (error) {
-        console.log('theres an error:', error)
-    
-    }
-}
-
-console.log(randomQuote())
+//code goes here
