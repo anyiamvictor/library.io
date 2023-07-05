@@ -9,21 +9,28 @@
 </head>
 <body>
 
+<main>
     <div class="container">
         <h1 id="library_header_text">Your Library</h1>    
-        
-
+      
         <section class="section1">
              <div class="quotes">
-            <h1>Quotes for You</h1>
-                <p id="quote_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea animi, accusamus repellat adipisci alias debitis reiciendis voluptas, ut magnam nobis voluptatibus iste maxime cumque sint quasi distinctio accusantium? Facere!</p>
-        </div>  
+                    <h1>Quotes for You</h1>
+                    <p id="quote_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea animi, accusamus repellat adipisci alias debitis reiciendis voluptas, ut magnam nobis voluptatibus iste maxime cumque sint quasi distinctio accusantium? Facere!</p>
+                    <br>
+                    <span style="z-index:50;font-size:0.9em; font-weight: bold;">
+                     <img src="https://theysaidso.com/branding/theysaidso.png" height="20" width="20" alt="theysaidso.com"/>
+                     <a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com" style="color: #ccc; margin-left: 4px; vertical-align: middle;">
+                       They Said So®
+                     </a>
+</span>
+                </div>  
 
-         <button id="openModalBtn"><span id="plus">&plus;</span></button>
+            <button id="openModalBtn"><span id="plus">&plus;</span></button>
         </section>
        
 
-         <div class="add_books_section" >
+        <div class="add_books_section" >
         </div>
             
         <div id="modal" class="modal">
@@ -42,7 +49,7 @@
                         <input type="number" class="form-inputs" id="user-input_page_numbers" name="user-input_page_numbers" required>  
                          
                         <label for="user-input_summary" class="labels" id="label_user_input">Quick Summary:</label>
-                        <textarea name="user-input_summary" id="user-input_summary" cols="30" rows="10" maxlength="300" placeholder="Not more than 700 characters..."></textarea>
+                        <textarea name="user-input_summary" id="user-input_summary" cols="30" rows="10" maxlength="700" placeholder="Not more than 700 characters..."></textarea>
                     
                         <div class="check-rate">
                             
@@ -64,13 +71,19 @@
                             </div> 
                             
                             <button type="submit" class="btn" id="btn-submit">Add Book</button>
-                        </form>
+            
+                </form>
 
-                
             </div>
-        </div>
 
-    
+        </div>
+  </div>
+</main>
+ 
+<footer id="footer">
+    <p class="footer_text">Created by <a href="https://github.com/anyiamvictor"><img src="img/github-mark-white.png" alt="github.png"> anyiamvictor</a> Photo credit by <a href="https://unsplash.com/@itfeelslikefilm">janko-ferlic</a> on unsplash in collaboration with <img src="img/odin.png" alt="TOP.jpg"><a href="https://www.theodinproject.com/">The Odin Project</a> </p>
+</footer>
 
 </body>
+
 </html>

@@ -64,14 +64,16 @@ libraryform.addEventListener('submit', function (e) {
     console.log(bookItem);
 
     const newBookHTML =
-      `<div class="new_book">
+      `
+      <div class="new_book">
       <h3 class=" new_book_h"> Book Title:</h3><p class=" new_book_p" id="book_title_content">${bookTitleValue}</p>
       <h3 class=" new_book_h"> Book Author:</h3><p class=" new_book_p" id="book_title_content">${bookAuthorValue}</p>
       <h3 class=" new_book_h"> Number of Pages:</h3><p class=" new_book_p" id="book_title_content">${pageNumbersValue}</p>
-      <h3 class=" new_book_h"> My Rating:</h3><p class=" new_book_p" id="book_title_content">${rate_value ? rate_value : '0'} Star(s)</p>
+      <h3 class=" new_book_h"> My Rating:</h3><p class=" new_book_p" id="book_title_content">${rate_value ? rate_value : '0'} Star rating</p>
       <h3 class=" new_book_h"> Status:</h3><p class=" new_book_p" id="book_title_content">${toggleReadValue}</p>
       <h3 class=" new_book_h" id="summary_heading"> Summary</h3><p class=" new_book_p" id="book_title_summary">${bookSummaryValue?bookSummaryValue:'<i>No Summary Provided</i>'}</p>
       <span class="book_close" id="book_close"></span>
+        
         </div>`;
     bookSection.insertAdjacentHTML('beforeend', newBookHTML);
 
@@ -84,7 +86,10 @@ const bookCloseElements = document.querySelectorAll('.book_close');
       newBook.remove();
     });
   });
-    
+    // add the book to the Library Array from here i can list all books added
+    myLibrary.push(bookItem);
+
+    // resets all parametars
         this.reset();
         // reset the star rating
         stars.forEach((star) => {
@@ -134,3 +139,32 @@ stars.forEach((star, index) => {
     }
   });
 });
+
+
+
+// API call for the ramdom quote of the day
+
+async function randomQuote() {
+    try {
+        // const response = await fetch("GET",'http://quotes.rest/qod.json?api_key=<I31clCqTsiNb314dIJOJFObBkqQu5lp8xVLRqQ7G></I31clCqTsiNb314dIJOJFObBkqQu5lp8xVLRqQ7G>');
+
+        const response2 = await fetch(" curl - v - i - X GET http://quotes.rest/qod.json?category=inspire");
+       
+        // const data = await response.json();
+        const data2 =  response2;
+
+
+        // console.log(data);
+        console.log(data2);
+
+
+
+    }
+
+    catch (error) {
+        console.log('theres an error:', error)
+    
+    }
+}
+
+console.log(randomQuote())
