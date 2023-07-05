@@ -8,27 +8,44 @@
     <title>Library</title>
 </head>
 <body>
+
     <div class="container">
-            
-         <button id="openModalBtn">Open Form</button>
+        <h1 id="library_header_text">Your Library</h1>    
+        
+
+        <section class="section1">
+             <div class="quotes">
+            <h1>Quotes for You</h1>
+                <p id="quote_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ea animi, accusamus repellat adipisci alias debitis reiciendis voluptas, ut magnam nobis voluptatibus iste maxime cumque sint quasi distinctio accusantium? Facere!</p>
+        </div>  
+
+         <button id="openModalBtn"><span id="plus">&plus;</span></button>
+        </section>
+       
+
+         <div class="add_books_section" >
+        </div>
             
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span id="closeModalBtn" class="close">&times;</span>
-                <h2>Modal Form</h2>
+                <h1 id="heading_text">Add a Book</h1>
                 
-                <form action="" id="library-form">
-                        <label for="user-input_label" class="labels" id="label_book">Enter a book title:</label>
-                        <input type="text" class="form-inputs" id="user-input_book" name="user-input_book">
+                <form action="#" id="library-form">
+                        <label for="user-input_book_title" class="labels" id="label_book">Enter a book title:</label>
+                        <input type="text" class="form-inputs" id="user-input_book_title" name="user-input_book_title" required>
                     
                         <label for="user-input_author" class="labels" id="label_author">Enter Author Name:</label>
-                        <input type="text" class="form-inputs" id="user-input_author" name="user-input_author">
+                        <input type="text" class="form-inputs" id="user-input_author" name="user-input_author" required>
                     
                         <label for="user-input_page_numbers" class="labels" id="label_page_numbers">Enter Number of Pages:</label>
-                        <input type="number" class="form-inputs" id="user-input_page_numbers" name="user-input_page_numbers">
+                        <input type="number" class="form-inputs" id="user-input_page_numbers" name="user-input_page_numbers" required>  
+                         
+                        <label for="user-input_summary" class="labels" id="label_user_input">Quick Summary:</label>
+                        <textarea name="user-input_summary" id="user-input_summary" cols="30" rows="10" maxlength="300" placeholder="Not more than 700 characters..."></textarea>
                     
                         <div class="check-rate">
-
+                            
                             <div class="toggle-checkbox">
                                 <input type="checkbox" id="toggle" class="toggle-input">
                                 <label for="toggle" class="toggle-label">
@@ -42,17 +59,18 @@
                                     <svg class=star xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="white" stroke="none" stroke-linejoin="round" stroke-width="32" d="M480 208H308L256 48l-52 160H32l140 96l-54 160l138-100l138 100l-54-160Z"/></svg>
                                     <svg class=star xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="white" stroke="none" stroke-linejoin="round" stroke-width="32" d="M480 208H308L256 48l-52 160H32l140 96l-54 160l138-100l138 100l-54-160Z"/></svg>
                                     <svg class=star xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="white" stroke="none" stroke-linejoin="round" stroke-width="32" d="M480 208H308L256 48l-52 160H32l140 96l-54 160l138-100l138 100l-54-160Z"/></svg>
-                                     <p id="rating">0 Star Rating</p>      
+                                    <p id="rating">0 Star Rating</p>      
                                 </span>
-                            </div>                
+                            </div> 
+                            
+                            <button type="submit" class="btn" id="btn-submit">Add Book</button>
                         </form>
-                        <br>
-                        <br>
-                        <button type="submit" class="btn" id="btn-submit">Add Book</button>
+
+                
             </div>
         </div>
 
-    </div>
+    
 
 </body>
 </html>

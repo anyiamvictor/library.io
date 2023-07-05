@@ -1,11 +1,4 @@
-/* Css Reset */
-:root{
-    --color-primary-background:black;
-    --color-secondary-background:black;
-    --color-primary-font:white;
-    --color-secondary-font:black;
-}
-*,
+/* Css Reset */*,
 *::before,
 *::after {
   margin: 0;
@@ -16,22 +9,152 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; 
+  text-transform: capitalize;
 }
 body{
-    background-color:rgba(128, 128, 128, 0.146);
+    background-image:url(img/background-janko-ferlic.jpg);
+    background-position: auto;    
+    font-family:'Times New Roman', Times, serif
 }
+
+/* for the quotes and add button */
+.section1{
+    display:flex;
+    justify-content: space-between;
+    background-color:rgba(242, 242, 242, 0.203);
+    border-radius:9px;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;   
+    justify-content:center;
+    align-items: center;     
+    
+    }
+    
+}
+
+
 
 .container{
-    display:block;
-    /* position: relative; */
-    height:100vh;
-    width:100vh;
+    margin:28px auto;
+    padding:0 12rem;
+    width:100%;
+}
+
+.quotes{
+    width:50%;
+    background-color: rgba(18, 17, 2, 0.128);
+    margin:5rem;
+    padding:2rem;
+    border-radius:5rem;
+    font-size:3rem;
+    color:gainsboro;
+     @media screen and (max-width: 1200px) {
+   width:90%;
+   padding:2rem;     
+    
+    }
+}
+
+.quotes>h1{
+    text-align:center;
+    margin-bottom:1rem;
+}
+
+
+/* section for adding new books by users */
+.add_books_section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:18px auto;
+    flex-wrap: wrap;
+    gap:15px;
+    padding:16px;
+    border:1px solid;
+    border:5px;
+}
+
+/* new books by users */
+.new_book{
+    display:grid;
+    position: relative;
+    /* overflow:auto; */
+    grid-template-columns: repeat(2, .5fr);
+    font-size:2rem;
+    width:500px;
+    grid-gap:10px;
+    padding:3rem;
+    background-color: #272727d7;
+    border-radius:9px;
+    box-shadow: 1px 2px 15px gray,1px 2px 25px rgba(104, 88, 246, 0.301);
+   }
+
+ .new_book_p{
+    font-size:21px;
+    font-weight: 500;
+    color:#4bb6fe;
+ }
+
+ .new_book_h{
+    color:rgb(255, 194, 194);    
+    font-size:21px;
+ }
+
+ #summary_heading{
+    grid-column:1/-1;
+    text-align: center;
+    padding:2rem;
+    font-size:3rem;color:rgb(195, 255, 105);
+    
+ }
+
+ #book_title_summary{
+text-align: justify;
+grid-column:1/-1;
+color:rgb(219, 249, 241);
 
 
 }
-/* Same CSS styles as before */
+
+#openModalBtn{
+    width:300px;
+    height:250px;
+    border:none;
+    background-color:#159ef9;
+    border-radius:20%;
+    margin:5rem;
+    box-shadow: 1px 2px 15px rgb(3, 3, 3),1px 2px 15px rgba(104, 88, 246, 0.301);
+    transition:all .2s;
+
+}
+#plus{
+    color:rgba(1, 25, 243, 0.432);
+    font-size:20rem;
+    display:flex;
+    justify-content: center;
+}
+
+#openModalBtn:active{
+    transform:scale(.89);
+    box-shadow: 0px 1px 0px gray, 0px 2px 2px rgba(104, 88, 246, 0.301);
+
+}
+
+#book_close:before{
+    content:'x';
+    color:white;
+    position:absolute;
+    top:0;
+    right:22px;
+    cursor:pointer;
+    font-size: 25px;
+    font-weight:900;
+
+
+}
+/* for modal view */
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -47,13 +170,13 @@ body{
   color:white;
   padding: 15px;
   border-radius: 15px;
-  width: 35%;
-  height:60%;
+  width: 45%;
+  height:auto;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
   position:absolute;
-  background-color: rgb(1, 61, 59);
+  background-color: rgb(2, 2, 166);
 
 }
 
@@ -76,27 +199,39 @@ color:black;background-color: #fff;
 }
 
 
+#user-input_summary{
+    resize:none;
+    margin-bottom:1rem;
+    padding:16px;
+    
+}
+
+textarea::placeholder {
+  color: #1542f4;
+  font-style: italic; 
+}
+
 button[type="submit"] {
-  background-color: #5da104;
+    padding:16px;
+  background-color: #1542f4;
   color: white;
-  padding: 15px 26px;
   border: none;
   cursor: pointer;
-  position:absolute;
-  left:50%;
+  margin-left:50%;
   translate:-50%;
   border-radius:5px;
   font-size: large;
   font-weight: 900;
-  transition: all .3s;
-  box-shadow: 0px 12px 35px rgb(0, 0, 0);
+  transition: all .3s;  
+  box-shadow: 0px 10px 55px rgb(1, 4, 91);
+  margin-bottom:3rem;
 }
 
 
 #btn-submit:active{
     transform:scale(.89);
     transform:translatey(6px);
-  box-shadow: .0px 1px 5px rgb(0, 0, 0);
+    box-shadow: .0px 1px 5px rgb(0, 0, 0);
 
 }
 
@@ -105,32 +240,43 @@ button[type="submit"] {
     display:flex;
     flex-direction: column;
     justify-content: center;
-   
-
 }
 
-#library-form>:not(:last-child){
-    font-size:200%;
-    border-radius: 15px;
-    padding:10px;
-    width:90%
 
+#library-form *{
+    border-radius: 15px;
+
+}
+#library_header_text{
+    padding:10px;
+    text-align:center;
+    font-size: 8rem;
+    text-align: center;
+    border-radius:20%;
+    color:rgb(255, 255, 255);
+    margin:5rem 0;
+    text-shadow: 1px 2px 25px rgb(103, 88, 246),1px 2px 75px rgb(0, 0, 0),1px 2px 5px rgb(0, 0, 0);
 }
 
 .form-inputs{
-    border-bottom:2px solid rgb(224, 66, 66);
-    
+    border-left:3px solid rgb(110, 138, 252);   
+    border-right:3px solid rgb(102, 131, 249); 
+    padding:10px;
+    width:85%;
 
 }
 
-.form-inputs:focus{
+.form-inputs:focus, #user-input_summary:focus{
     background-color:rgb(193, 239, 251) ;
 }
 
+.labels{
+    margin:12px;
+    font-size:19px;
+}
 #user-input_page_numbers{
     width:120px !important;
 }
-
 
 
 .toggle-checkbox {
@@ -187,13 +333,17 @@ button[type="submit"] {
 }
 
 .toggle-input:checked + .toggle-label:before{
-    background-color: green;
+    background-color:#1542f4;
 }
 .toggle-input:checked + .toggle-label{
     background-color: white;
 }
 
-
+#heading_text{
+    font-size:23px;
+    text-align: center;
+    margin-bottom:22px;
+}
 .toggle-input:not(:checked) + .toggle-label .toggle-text:before {
   content: "In Progress";
 }
@@ -202,7 +352,7 @@ button[type="submit"] {
 .check-rate{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding:20px;
 }
 
@@ -211,7 +361,7 @@ button[type="submit"] {
 }
 
 .star.active path{
- fill: rgb(254, 251, 75);
+ fill: rgb(252, 249, 103);
  stroke:none;
 }
 
@@ -220,3 +370,5 @@ button[type="submit"] {
     text-align: center;
     font-size:16px;
 }
+
+
