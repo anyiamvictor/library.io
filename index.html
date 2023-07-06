@@ -13,16 +13,22 @@
     <div class="container">
         <h1 id="library_header_text">Your Library</h1>    
       
-        <section class="section1">
+    1<section class="section1">
              <div class="quotes">
                     <h1>Quotes for You</h1>
                     <p id="quote_text">
                         This is suppose to be a random quote generator for readers to motivate your reading passion
                     </p>
-                        <br>
-                    
-</span>
-                </div>  
+
+                </div>                
+             <div class="quotes information">
+                      <h1 id="library_heading">Library Summary</h1>
+                        <div class="information_row">  <h5>total books:</h5><p class="information_content" id="total_book_content"> 0</p></div>
+                        <div class="information_row">  <h5>completed books:</h5><p class="information_content" id="total_book_completed"> 0</p></div>
+                        <div class="information_row">  <h5>unfinished books:</h5><p class="information_content" id="total_book_incomplete"> 0</p></div>
+            
+                   </div>
+               
 
             <button id="openModalBtn"><span id="plus">&plus;</span></button>
         </section>
@@ -38,7 +44,7 @@
                 
                 <form action="#" id="library-form">
                         <label for="user-input_book_title" class="labels" id="label_book">Enter a book title:</label>
-                        <input type="text" class="form-inputs" id="user-input_book_title" name="user-input_book_title" required>
+                        <input type="text" class="form-inputs" id="user-input_book_title" name="user-input_book_title" autofocus required>
                     
                         <label for="user-input_author" class="labels" id="label_author">Enter Author Name:</label>
                         <input type="text" class="form-inputs" id="user-input_author" name="user-input_author" required>
@@ -67,8 +73,8 @@
                                     <p id="rating">0 Star Rating</p>      
                                 </span>
                             </div> 
-                            
                             <button type="submit" class="btn" id="btn-submit">Add Book</button>
+                            
             
                 </form>
 
